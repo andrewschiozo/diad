@@ -1,0 +1,20 @@
+{
+  "name": "diad-concursos",
+  "version": "1.0.0",
+  "description": "Sistema de alta disponibilidade para acompanhamento da aplicação de provas em tempo real",
+  "main": "src/http/server.js",
+  "type": "module",
+  "scripts": {
+    "start:api": "node src/http/server.js",
+    "start:worker": "node src/workers/eventsWorker.js",
+    "dev:api": "node --watch --env-file=.env src/http/server.js",
+    "dev:worker": "node --watch --env-file=.env src/workers/eventsWorker.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "amqplib": "^0.10.5",
+    "fastify": "^5.2.1",
+    "ioredis": "^5.4.2",
+    "mysql2": "^3.12.0"
+  }
+}
