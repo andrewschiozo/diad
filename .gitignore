@@ -1,0 +1,9 @@
+node_modules/
+npm-debug.log*
+.env
+.env.local
+.DS_Store
+
+# Volumes locais de docker / logs
+*.log
+docker-volumes/
