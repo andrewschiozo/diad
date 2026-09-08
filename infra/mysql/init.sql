@@ -17,18 +17,13 @@ CREATE TABLE IF NOT EXISTS locais_aplicacao (
     nome_escola VARCHAR(255) NOT NULL,
     token_acesso VARCHAR(128) NOT NULL UNIQUE,
     senha_hash VARCHAR(255) NOT NULL,
-    
+
     -- 0 AGUARDANDO
     -- 1 PORTOES_ABERTOS
     -- 2 PORTOES_FECHADOS
     -- 3 PROVAS_INICIADAS
     -- 4 PROVAS_ENCERRADAS
     status_atual TINYINT UNSIGNED NOT NULL DEFAULT 0,
-    
-    horario_abertura_portao DATETIME NULL,
-    horario_fechamento_portao DATETIME NULL,
-    horario_inicio_prova DATETIME NULL,
-    horario_termino_prova DATETIME NULL,
     
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
