@@ -5,10 +5,11 @@
   "main": "src/http/server.js",
   "type": "module",
   "scripts": {
-    "start:api": "node src/http/server.js",
-    "start:worker": "node src/workers/eventsWorker.js",
-    "dev:api": "node --watch --env-file=.env src/http/server.js",
-    "dev:worker": "node --watch --env-file=.env src/workers/eventsWorker.js"
+    "build": "tsc",
+    "start:api": "node dist/http/server.js",
+    "start:worker": "node dist/workers/eventsWorker.js",
+    "dev:api": "tsx watch --env-file=.env src/http/server.ts",
+    "dev:worker": "tsx watch --env-file=.env src/workers/eventsWorker.ts"
   },
   "dependencies": {
     "@fastify/cors": "^10.0.1",
@@ -16,5 +17,11 @@
     "fastify": "^5.2.1",
     "ioredis": "^5.4.2",
     "mysql2": "^3.12.0"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.8",
+    "@types/node": "^26.5.0",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
   }
 }
