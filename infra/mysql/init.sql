@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS eventos_aplicacao (
     local_aplicacao_id INT NOT NULL,
     status_anterior TINYINT UNSIGNED NOT NULL,
     status_novo TINYINT UNSIGNED NOT NULL,
-    registrado_em DATETIME NOT NULL,
+    registrado_em TIMESTAMP NOT NULL,
     ip_origem VARCHAR(45) NULL,
     user_agent VARCHAR(255) NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
