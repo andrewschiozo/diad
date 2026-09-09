@@ -10,7 +10,7 @@ export interface LocalCacheDTO {
     statusAtual: StatusAplicacao;
 }
 
-export type CanalNotificacalCallback = (payload: string) => void;
+export type CanalNotificacaoCallback = (payload: string) => void;
 
 export interface CachePort {
     connect(): Promise<void>;
@@ -23,6 +23,6 @@ export interface CachePort {
 
     // pub/sub do SSE
     publicarAtualizacao(canal: string, dados: object): Promise<void>;
-    inscreverCanal(canal: string, callback: CanalNotificacalCallback): Promise<void>;
+    inscreverCanal(canal: string, callback: CanalNotificacaoCallback): Promise<void>;
     desinscreverCanal(canal: string): Promise<void>;
 }
