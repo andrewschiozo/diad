@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS eventos_aplicacao (
 
 -- Seed inicial para testes
 INSERT INTO concursos (codigo, nome) 
-VALUES ('CNU-2026', 'Concurso Nacional Unificado 2026')
+VALUES ('2601', 'Concurso Nacional Unificado 2026')
 ON DUPLICATE KEY UPDATE nome=VALUES(nome);
 
 -- Senha padrão do seed: 'coordenador123' (hash bcrypt)
