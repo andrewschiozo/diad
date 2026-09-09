@@ -7,3 +7,5 @@ npm-debug.log*
 # Volumes locais de docker / logs
 *.log
 docker-volumes/
+
+.vscode
